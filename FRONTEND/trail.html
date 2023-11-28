@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalised Clothing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000; /* Updated color to black */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .clothing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .clothing-item {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .square-curved-block {
+            display: inline-block;
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.5s;
+            position: relative;
+        }
+
+        .square-curved-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .category-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px;
+            margin: 0;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .text-container {
+            background: black;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid white;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Add any other specific styles for clothing items as needed... */
+
+        .clothing-search {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-bar {
+            width: 200px;
+            padding: 8px;
+        }
+
+        .search-button {
+            height: 30px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Personalised Clothing</h1>
+        <form id="search-form" class="clothing-search">
+            <input type="text" name="search" id="search-input" placeholder="Search" class="search-bar">
+            <input type="submit" value="Search" class="search-button" id="search-button">
+        </form>
+    </header>
+    <div class="clothing-container">
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr1.jpg', 'Black Button Dress')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr1.jpg" alt="a1">
+                <div class="text-container">Black Button Dress</div>
+                <p class="category-name">Black Button Dress</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr2.jpg', 'pink sequin Dress')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr2.jpg" alt="What's New">
+                <div class="text-container">pink sequin Dress</div>
+                <p class="category-name">pink sequin Dress</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr3.jpg', 'Blue butterfly Dress')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr3.jpg" alt="What's New">
+                <div class="text-container">Blue butterfly Dress</div>
+                <p class="category-name">Blue butterfly Dress</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr4.jpg', 'Purple bow Dress')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr4.jpg" alt="What's New">
+                <div class="text-container">Purple bow Dress</div>
+                <p class="category-name">Purple bow Dress</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr5.jpg', 'Tri colour Frock')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr5.jpg" alt="What's New">
+                <div class="text-container">Tri colour Frock</div>
+                <p class="category-name">Tri colour Frock</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr6.jpg', 'Purple Princess Frock')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr6.jpg" alt="What's New">
+                <div class="text-container">Purple Princess Frock</div>
+                <p class="category-name">Purple Princess Frock</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr7.jpg', 'Beige Princess Frock')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr7.jpg" alt="What's New">
+                <div class="text-container">Beige Princess Frock</div>
+                <p class="category-name">Beige Princess Frock</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item8">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr8.jpg', 'Pattu Frock')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr8.jpg" alt="Red Full Dress">
+                <div class="text-container">Pattu Frock</div>
+                <p class="category-name">Pattu Frock</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr9.jpg', 'Blue layered frock')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr9.jpg" alt="What's New">
+                <div class="text-container">Blue layered frock</div>
+                <p class="category-name">Blue layered frock</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/FROCKS/fr10.jpg', 'Diana Red Frock')">
+                <img class="square-curved-img" src="assets/images/kids/category/FROCKS/fr10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Diana Red Frock</div>
+                <p class="category-name">Diana Red Frock</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp1.jpg', 'Olive Green JumpSuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp1.jpg" alt="a1">
+                <div class="text-container">Olive Green JumpSuit</div>
+                <p class="category-name">Olive Green JumpSuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp2.jpg', 'Floral JumpSuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp2.jpg" alt="What's New">
+                <div class="text-container">Floral JumpSuit</div>
+                <p class="category-name">Floral JumpSuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp3.jpg', '2 piece JumpSuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp3.jpg" alt="What's New">
+                <div class="text-container">2 piece JumpSuit</div>
+                <p class="category-name">2 piece JumpSuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp4.jpg', 'Checks Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp4.jpg" alt="What's New">
+                <div class="text-container">Checks Jumpsuit</div>
+                <p class="category-name">Checks Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp5.jpg', 'Beige Bear Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp5.jpg" alt="What's New">
+                <div class="text-container">Beige Bear Jumpsuit</div>
+                <p class="category-name">Beige Bear Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp6.jpg', 'Baby blue Boy Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp6.jpg" alt="What's New">
+                <div class="text-container">Baby blue Boy Jumpsuit</div>
+                <p class="category-name">Baby blue Boy Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp7.jpg', 'Beige 2 piece Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp7.jpg" alt="What's New">
+                <div class="text-container">Beige 2 piece Jumpsuit</div>
+                <p class="category-name">Beige 2 piece Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp8.jpg', 'Green Boy Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp8.jpg" alt="Red Full Dress">
+                <div class="text-container">Green Boy Jumpsuit</div>
+                <p class="category-name">Green Boy Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp9.jpg', 'Stylish Boy Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp9.jpg" alt="What's New">
+                <div class="text-container">Stylish Boy Jumpsuit</div>
+                <p class="category-name">Stylish Boy Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JUMPSUITS/jp10.jpg', 'Cute grey Vintage Jumpsuit')">
+                <img class="square-curved-img" src="assets/images/kids/category/JUMPSUITS/jp10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Cute grey Vintage Jumpsuit</div>
+                <p class="category-name">Cute grey Vintage Jumpsuit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je1.jpg', 'Pink Heart Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je1.jpg" alt="a1">
+                <div class="text-container">Pink Heart Jean</div>
+                <p class="category-name">Pink Heart Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je2.jpg', 'High waist Loose Fit Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je2.jpg" alt="What's New">
+                <div class="text-container">High waist Loose Fit Jean</div>
+                <p class="category-name">High waist Loose Fit Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item8">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je3.jpg', 'Boy Tight Fit Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je3.jpg" alt="What's New">
+                <div class="text-container">Boy Tight Fit Jean</div>
+                <p class="category-name">Boy Tight Fit Jean</p>
+            </a>
+        </div>
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je4.jpg', 'Girl Flare Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je4.jpg" alt="What's New">
+                <div class="text-container">Girl Flare Jean</div>
+                <p class="category-name">Girl Flare Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je5.jpg', 'Black Balloon Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je5.jpg" alt="What's New">
+                <div class="text-container">Black Balloon Jean</div>
+                <p class="category-name">Black Balloon Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je6.jpg', 'Chained Black Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je6.jpg" alt="What's New">
+                <div class="text-container">Chained Black Jean</div>
+                <p class="category-name">Chained Black Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je7.jpg', 'Boy Skinny Blue Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je7.jpg" alt="What's New">
+                <div class="text-container">Boy Skinny Blue Jean</div>
+                <p class="category-name">Boy Skinny Blue Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je8.jpg', 'Boy dark blue Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je8.jpg" alt="Red Full Dress">
+                <div class="text-container">Boy dark blue Jean</div>
+                <p class="category-name">Boy dark blue Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je9.jpg', 'Pocket Jogger Jean')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je9.jpg" alt="What's New">
+                <div class="text-container">Pocket Jogger Jean</div>
+                <p class="category-name">Pocket Jogger Jean</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/JEANS/je10.jpg', 'Funky Denim Short')">
+                <img class="square-curved-img" src="assets/images/kids/category/JEANS/je10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Funky Denim Short</div>
+                <p class="category-name">Funky Denim Short</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item8">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i1.jpg', 'Nike Sport Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i1.jpg" alt="a1">
+                <div class="text-container">Nike Sport Suit</div>
+                <p class="category-name">Nike Sport Suit</p>
+            </a>
+        </div>
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i2.jpg', 'Tie Dye Nike Sport Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i2.jpg" alt="What's New">
+                <div class="text-container">Tie Dye Nike Sport Suit</div>
+                <p class="category-name">Tie Dye Nike Sport Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i3.jpg', 'Pink Tennis Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i3.jpg" alt="What's New">
+                <div class="text-container">Pink Tennis Suit</div>
+                <p class="category-name">Pink Tennis Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i4.jpg', 'Adidas Black Sport Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i4.jpg" alt="What's New">
+                <div class="text-container">Adidas Black Sport Suit</div>
+                <p class="category-name">Adidas Black Sport Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i5.jpg', 'Off-White Sport Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i5.jpg" alt="What's New">
+                <div class="text-container">Off-White Sport Suit</div>
+                <p class="category-name">Off-White Sport Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i6.jpg', 'Basketball Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i6.jpg" alt="What's New">
+                <div class="text-container">Basketball Suit</div>
+                <p class="category-name">Basketball Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i7.jpg', 'Grey Sport suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i7.jpg" alt="What's New">
+                <div class="text-container">Grey Sport suit</div>
+                <p class="category-name">Grey Sport suit</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="clothing-container">
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i8.jpg', 'Baby Blue sport suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i8.jpg" alt="Red Full Dress">
+                <div class="text-container">Baby Blue sport suit</div>
+                <p class="category-name">Baby Blue sport suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i9.jpg', 'Striped sport suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i9.jpg" alt="What's New">
+                <div class="text-container">Striped sport suit</div>
+                <p class="category-name">Striped sport suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/SPORTS/i10.jpg', 'Tie-Dye Sport Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/SPORTS/i10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Tie-Dye Sport Suit</div>
+                <p class="category-name">Tie-Dye Sport Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i1.jpg', 'Cute Cat Tshrit Unisex')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i1.jpg" alt="a1">
+                <div class="text-container">Cute Cat Tshrit Unisex</div>
+                <p class="category-name">Cute Cat Tshrit Unisex</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i2.jpg', 'Love Tshirt For Women')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i2.jpg" alt="What's New">
+                <div class="text-container">Love Tshirt For Women</div>
+                <p class="category-name">Love Tshirt For Women</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i3.jpg', 'Oversized Back Print Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i3.jpg" alt="What's New">
+                <div class="text-container">Oversized Back Print Tshirt</div>
+                <p class="category-name">Oversized Back Print Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i4.jpg', 'Spyderman Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i4.jpg" alt="What's New">
+                <div class="text-container">Spyderman Tshirt</div>
+                <p class="category-name">Spyderman Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item8">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i5.jpg', 'Mickey Mouse Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i5.jpg" alt="What's New">
+                <div class="text-container">Mickey Mouse Tshirt</div>
+                <p class="category-name">Mickey Mouse Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item9">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i6.jpg', 'Swag Cat Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i6.jpg" alt="What's New">
+                <div class="text-container">Swag Cat Tshirt</div>
+                <p class="category-name">Swag Cat Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item10">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i7.jpg', 'Cute BEE Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i7.jpg" alt="What's New">
+                <div class="text-container">Cute BEE Tshirt</div>
+                <p class="category-name">Cute BEE Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item11">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i8.jpg', 'Pink Dobby Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i8.jpg" alt="Red Full Dress">
+                <div class="text-container">Pink Dobby Tshirt</div>
+                <p class="category-name">Pink Dobby Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item12">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i9.jpg', 'Mad Man Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i9.jpg" alt="What's New">
+                <div class="text-container">Mad Man Tshirt</div>
+                <p class="category-name">Mad Man Tshirt</p>
+            </a>
+        </div>
+    </div>
+    <div class="clothing-container">
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/TSHIRTS/i10.jpg', 'Snoopy Tshirt')">
+                <img class="square-curved-img" src="assets/images/kids/category/TSHIRTS/i10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Snoopy Tshirt</div>
+                <p class="category-name">Snoopy Tshirt</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i1.jpg', 'Baby pink Set')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i1.jpg" alt="a1">
+                <div class="text-container">Baby pink Set</div>
+                <p class="category-name">Baby pink Set</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i2.jpg', 'Cheesecake set')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i2.jpg" alt="What's New">
+                <div class="text-container">Cheesecake set</div>
+                <p class="category-name">Cheesecake set</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i3.jpg', 'Daisy Set')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i3.jpg" alt="What's New">
+                <div class="text-container">Daisy Set</div>
+                <p class="category-name">Daisy Set</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i4.jpg', 'Giraffee Set')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i4.jpg" alt="What's New">
+                <div class="text-container">Giraffee Set</div>
+                <p class="category-name">Giraffee Set</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i5.jpg', 'Sunrise set')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i5.jpg" alt="What's New">
+                <div class="text-container">Sunrise set</div>
+                <p class="category-name">Sunrise set</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i6.jpg', 'Leapord print set')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i6.jpg" alt="What's New">
+                <div class="text-container">Leapord print set</div>
+                <p class="category-name">Leapord print set</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item8">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i7.jpg', 'Cozy Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i7.jpg" alt="What's New">
+                <div class="text-container">Cozy Suit</div>
+                <p class="category-name">Cozy Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item9">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i8.jpg', 'Blue Warm Baby Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i8.jpg" alt="Red Full Dress">
+                <div class="text-container">Blue Warm Baby Suit</div>
+                <p class="category-name">Blue Warm Baby Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item10">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i9.jpg', 'Starry White suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i9.jpg" alt="What's New">
+                <div class="text-container">Starry White suit</div>
+                <p class="category-name">Starry White suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item11">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/INFANTS/i10.jpg', 'Olive green Dress')">
+                <img class="square-curved-img" src="assets/images/kids/category/INFANTS/i10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Olive green Dress</div>
+                <p class="category-name">Olive green Dress</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item12">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i1.jpg', 'Satin Boy Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i1.jpg" alt="a1">
+                <div class="text-container">Satin Boy Night Suit</div>
+                <p class="category-name">Satin Boy Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item13">
+            <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i2.jpg', 'Satin Girl Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i2.jpg" alt="What's New">
+                <div class="text-container">Satin Girl Night Suit</div>
+                <p class="category-name">Satin Girl Night Suit</p>
+            </a>
+            <div class="clothing-item" id="item1">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i3.jpg', 'Blue Printed Boy Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i3.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i3.jpg" alt="What's New">
+                    <div class="text-container">Blue Printed Boy Night Suit</div>
+                    <p class="category-name">Blue Printed Boy Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item2">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i4.jpg', 'Baby Pink Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i4.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i4.jpg" alt="What's New">
+                    <div class="text-container">Baby Pink Night Suit</div>
+                    <p class="category-name">Baby Pink Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item3">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i5.jpg', 'Baby Pink Printed Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i5.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i5.jpg" alt="What's New">
+                    <div class="text-container">Baby Pink Printed Night Suit</div>
+                    <p class="category-name">Baby Pink Printed Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item4">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i6.jpg', 'Space Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i6.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i6.jpg" alt="What's New">
+                    <div class="text-container">Space Night Suit</div>
+                    <p class="category-name">Space Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item5">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i7.jpg', 'Beige Girl Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i7.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i7.jpg" alt="What's New">
+                    <div class="text-container">Beige Girl Night Suit</div>
+                    <p class="category-name">Beige Girl Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item6">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i8.jpg', 'Car Boy Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i8.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i8.jpg" alt="Red Full Dress">
+                    <div class="text-container">Car Boy Night Suit</div>
+                    <p class="category-name">Car Boy Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item7">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i9.jpg', 'Mini checks Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i9.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i9.jpg" alt="What's New">
+                    <div class="text-container">Mini checks Night Suit</div>
+                    <p class="category-name">Mini checks Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item8">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i10.jpg', 'Cute Grey Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i10.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i10.jpg" alt="Red A-line Dress">
+                    <div class="text-container">Cute Grey Night Suit</div>
+                    <p class="category-name">Cute Grey Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item9">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i1.jpg', 'Satin Boy Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i1.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i1.jpg" alt="a1">
+                    <div class="text-container">Satin Boy Night Suit</div>
+                    <p class="category-name">Satin Boy Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item10">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i2.jpg', 'Satin Girl Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i2.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i2.jpg" alt="What's New">
+                    <div class="text-container">Satin Girl Night Suit</div>
+                    <p class="category-name">Satin Girl Night Suit</p>
+                </a>
+            </div>
+        
+            <div class="clothing-item" id="item11">
+                <a class="square-curved-block" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i3.jpg', 'Blue Printed Boy Night Suit')" href="assets/images/kids/category/NIGHTWEAR/i3.jpg">
+                    <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i3.jpg" alt="What's New">
+                    <div class="text-container">Blue Printed Boy Night Suit</div>
+                    <p class="category-name">Blue Printed Boy Night Suit</p>
+                </a>
+            </div>
+        </div>
+        <div class="clothing-item" id="item1">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i4.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i4.jpg', 'Baby Pink Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i4.jpg" alt="What's New">
+                <div class="text-container">Baby Pink Night Suit</div>
+                <p class="category-name">Baby Pink Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item2">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i5.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i5.jpg', 'Baby Pink Printed Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i5.jpg" alt="What's New">
+                <div class="text-container">Baby Pink Printed Night Suit</div>
+                <p class="category-name">Baby Pink Printed Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item3">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i6.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i6.jpg', 'Space Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i6.jpg" alt="What's New">
+                <div class="text-container">Space Night Suit</div>
+                <p class="category-name">Space Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item4">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i7.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i7.jpg', 'Beige Girl Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i7.jpg" alt="What's New">
+                <div class="text-container">Beige Girl Night Suit</div>
+                <p class="category-name">Beige Girl Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item5">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i8.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i8.jpg', 'Car Boy Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i8.jpg" alt="Red Full Dress">
+                <div class="text-container">Car Boy Night Suit</div>
+                <p class="category-name">Car Boy Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item6">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i9.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i9.jpg', 'Mini checks Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i9.jpg" alt="What's New">
+                <div class="text-container">Mini checks Night Suit</div>
+                <p class="category-name">Mini checks Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item7">
+            <a class="square-curved-block" href="assets/images/kids/category/NIGHTWEAR/i10.jpg" onclick="openFullScreen('assets/images/kids/category/NIGHTWEAR/i10.jpg', 'Cute Grey Night Suit')">
+                <img class="square-curved-img" src="assets/images/kids/category/NIGHTWEAR/i10.jpg" alt="Red A-line Dress">
+                <div class="text-container">Cute Grey Night Suit</div>
+                <p class="category-name">Cute Grey Night Suit</p>
+            </a>
+        </div>
+    
+        <div class="clothing-item" id="item8">
+            <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j1.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j1.jpeg', 'Men active short')">
+                <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j1.jpeg" alt="a1">
+                <div class="text-container">Men active short</div>
+                <p class="category-name">Men active short</p>
+            </a>
+        </div>
+    </div>
+    <div class="clothing-item" id="item9">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j2.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j2.jpeg', 'Active Tracksuit')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j2.jpeg" alt="What's New">
+            <div class="text-container">Active Tracksuit</div>
+            <p class="category-name">Active Tracksuit</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item10">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j3.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j3.jpeg', 'Active Tshirt')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j3.jpeg" alt="What's New">
+            <div class="text-container">Active Tshirt</div>
+            <p class="category-name">Active Tshirt</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item11">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j4.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j4.jpeg', 'Grey sport suit')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j4.jpeg" alt="What's New">
+            <div class="text-container">Grey sport suit</div>
+            <p class="category-name">Grey sport suit</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item12">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j5.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j5.jpeg', 'Long sleeves sport')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j5.jpeg" alt="What's New">
+            <div class="text-container">Long sleeves sport</div>
+            <p class="category-name">Long sleeves sport</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item13">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j6.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j6.jpeg', 'Nike Jacket')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j6.jpeg" alt="What's New">
+            <div class="text-container">Nike Jacket</div>
+            <p class="category-name">Nike Jacket</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item14">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j7.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j7.jpeg', 'Nike Sweatpants')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j7.jpeg" alt="What's New">
+            <div class="text-container">Nike Sweatpants</div>
+            <p class="category-name">Nike Sweatpants</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item15">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j8.jpg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j8.jpg', 'Skinny Fit suit')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j8.jpg" alt="Red Full Dress">
+            <div class="text-container">Skinny Fit suit</div>
+            <p class="category-name">Skinny Fit suit</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item16">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j9.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j9.jpeg', 'Sleeveless gym jacket')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j9.jpeg" alt="What's New">
+            <div class="text-container">Sleeveless gym jacket</div>
+            <p class="category-name">Sleeveless gym jacket</p>
+        </a>
+    </div>
+    
+    <div class="clothing-item" id="item17">
+        <a class="square-curved-block" href="assets/images/men/category/ACTIVE WEAR/j10.jpeg" onclick="openFullScreen('assets/images/men/category/ACTIVE WEAR/j10.jpeg', 'Sleeveless Blue Sport-tee')">
+            <img class="square-curved-img" src="assets/images/men/category/ACTIVE WEAR/j10.jpeg" alt="Red A-line Dress">
+            <div class="text-container">Sleeveless Blue Sport-tee</div>
+            <p class="category-name">Sleeveless Blue Sport-tee</p>
+        </a>
+    </div>
+    
+    
+    </div>
+
+    <!-- Your existing footer... -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const squareCurvedBlocks = document.querySelectorAll(".square-curved-block");
+
+            document.getElementById("search-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+                const searchTerm = searchInput.value.toLowerCase();
+
+                squareCurvedBlocks.forEach(function (block) {
+                    const categoryName = block.querySelector(".category-name").innerText.toLowerCase();
+                    const textContainer = block.querySelector(".text-container").innerText.toLowerCase();
+
+                    if (categoryName.includes(searchTerm) || textContainer.includes(searchTerm)) {
+                        block.style.display = "block";
+                    } else {
+                        block.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

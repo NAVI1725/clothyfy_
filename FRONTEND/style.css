@@ -1,0 +1,222 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color and font for the whole page */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif, ;
+    background-color: #ACADA8;
+}
+.cursive-heading {
+    font-family: 'Pacifico', cursive;
+}
+.monospace-heading {
+    font-family: 'Courier New', monospace;
+}
+.decorative-heading {
+    font-family: 'Cinzel', cursive;
+}
+.modern-heading {
+    font-family: 'Futura', sans-serif;
+}
+.serif-heading {
+    font-family: 'Times New Roman', serif;
+}
+.sans-serif-heading {
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+
+/* Style the header, including the navigation menu */
+header {
+    background-color: #B8DBD9; /* Red background */
+    color: #2F4550; /* Gold text color */
+    padding: 20px;
+    text-align: center;
+}
+.cart-item {
+    width: 200px; /* Set the width of the cart items */
+    border: 1px solid #ccc; /* Add a border for each item */
+    margin: 10px; /* Add spacing between items */
+    padding: 10px; /* Add padding inside the items */
+    text-align: center;
+}
+
+.cart-item img {
+    max-width: 100%;
+    height: auto; /* Make sure the image fits within the block */
+}
+
+/* Add additional CSS styles as needed */
+/* CSS for the cart items */
+.car-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Adjust the radius as needed */
+    padding: 10px;
+    margin: 10px;
+}
+#car-content {
+    display: flex;
+    flex-direction: column; /* Items will be stacked vertically */
+    align-items: flex-end; /* Center items to the right */
+}
+.car-item img {
+    border-radius: 10px; /* Smooth the image corners */
+    margin-centre: 20px; /* Adjust the margin as needed */
+}
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #586F7C; /* Gold text color */
+    font-weight: bold;
+}
+
+/* Style registration and login sections */
+section#registration, section#login, section#user-profile {
+    background-color: #586F7C; /* Gold background */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* Add this CSS to your existing <style> section */
+.heart {
+    display: none;
+}
+
+li a:hover .heart {
+    display: inline;
+}
+
+form {
+    margin-top: 20px;
+}
+
+/* Add this CSS to your existing <style> section */
+.heart {
+    display: inline-block;
+    width: 30px; /* Adjust the width to your preference */
+    height: 35px; /* Adjust the height to your preference */
+    text-align: center;
+    line-height: 24px;
+    border: 2px solid #F4F4F9; /* Gold border color */
+    border-radius: 20%;
+    font-size: 18px;
+    transition: background-color 1.5s, color 1.5s;
+}
+
+/* Add this CSS to your existing <style> section */
+.heart {
+    display: inline-block;
+    width: 24px; /* Adjust the width to your preference */
+    height: 24px; /* Adjust the height to your preference */
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: transparent; /* Set the initial background to transparent */
+    transition: background-color 0.3s;
+}
+
+.wishlist-text {
+    display: none; /* Initially hide the Wishlist text */
+}
+
+li a:hover .heart {
+    background-color: #6c0a40; /* Red background color for the hover effect */
+    color: #e7e4dd; /* Gold text color for the hover effect */
+}
+
+li a:hover .wishlist-text {
+    display: inline; /* Display Wishlist text on hover */
+}
+
+/* Style homepage and product listings sections */
+section#homepage, section#product-listings {
+    background-color: #90afa3d9; /* Gold background */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #F4F4F9; /* Red text color */
+    margin-bottom: 15px;
+}
+
+/* Style buttons and form elements */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000; /* Gold border color */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #2F4550; /* Red background color */
+    color: #F4F4F9; /* Gold text color */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #586F7C; /* Dark background color on hover */
+}
+
+/* Style product listings */
+section#product-listings .product {
+    border: 1px solid #e4e1cf; /* Gold border color */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    section#product-listings .product {
+        width: 48%;
+    }
+}
+
+.category-block {
+    display: inline-block;
+    margin: 20px 25px; /* Add 20px horizontal margin and 25px vertical margin */
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: background-color 0.6s;
+    overflow: hidden; /* Ensure the image stays within the block */
+}
+
+.category-block:hover {
+    background-color: #730b84;
+    color: #3898ad;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* You can adjust the border-radius if needed */
+}

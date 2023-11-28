@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UPI Payment - Clothing Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>UPI Payment</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="address.html">Address</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="upi-payment">
+        <h2>UPI Payment Details</h2>
+        <form action="confirm.html" method="POST">
+            <label for="upi_id">UPI ID:</label>
+            <input type="text" id="upi_id" name="upi_id" required><br>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" required><br>
+
+            <input type="submit" value="Make UPI Payment">
+        </form>
+    </section>
+</body>
+</html>
