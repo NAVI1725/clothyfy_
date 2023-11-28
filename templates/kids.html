@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- In the head section of your HTML -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom-styles.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourCustomFont">
+
+    <title>Kids</title>
+    <style>
+        /* Add your CSS styles for the square curved blocks here */
+        .square-curved-block {
+            display: inline-block;
+            width: 230px;
+            height: 230px;
+            margin: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .square-curved-block:hover {
+            background-color: #730b84;
+        }
+        .square-curved-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .square-curved-block {
+            position: relative;
+            text-align: center;
+        }
+
+        .category-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and opacity as needed */
+            color: #fff; /* Text color */
+            padding: 5px; /* Adjust padding as needed */
+            margin: 0;
+        }
+
+        .square-curved-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: black;
+            color: white; /* Adjust text color as needed */
+            padding: 10px; /* Adjust padding as needed */
+            text-align: center;
+        }
+
+        /* Body Styles */
+        body {
+            background-color: #ACADA8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="tanu-header">
+        <span class="monospace-heading"><b>Kids!</b></span>
+    </h2>
+
+    </header>
+
+    <section id="product-listings">
+        <a class="square-curved-block" href="frocks.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/FROCKS/b1.jpg') }}" alt="frocks">
+            <p class="category-name">Frocks</p>
+        </a>
+        <a class="square-curved-block" href="kjeans.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/JEANS/b2.jpg') }}" alt="jeans">
+            <p class="category-name">Jeans</p>
+        </a>
+        <a class="square-curved-block" href="jump.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/JUMPSUITS/b2.jpg') }}" alt="jumpsuits">
+            <p class="category-name">Jumpsuits</p>
+        </a>
+        <a class="square-curved-block" href="newborn.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/INFANTS/b2.jpg') }}" alt="newborn">
+            <p class="category-name">New Born</p>
+        </a>
+        <a class="square-curved-block" href="night.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/NIGHTWEAR/b1.jpg') }}" alt="nightdresses">
+            <p class="category-name">Nightwear</p>
+        </a>
+        <a class="square-curved-block" href="ktshirts.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/TSHIRTS/b1.jpg') }}" alt="tshirts">
+            <p class="category-name">T-Shirts</p>
+        </a>
+        <a class="square-curved-block" href="summer.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/SUMMER/b1.webp') }}" alt="summer">
+            <p class="category-name">Summer</p>
+        </a>
+        <a class="square-curved-block" href="ksports.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/kids/category/SPORTS/b2.jpg') }}" alt="sports">
+            <p class="category-name">Sports</p>
+        </a>
+    </section>
+</body>
+</html>

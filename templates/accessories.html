@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- In the head section of your HTML -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom-styles.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourCustomFont">
+
+    <title>Accessories</title>
+    <style>
+        /* Add your CSS styles for the square curved blocks here */
+        .square-curved-block {
+            display: inline-block;
+            width: 230px;
+            height: 230px;
+            margin: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .square-curved-block:hover {
+            background-color: #730b84;
+        }
+        .square-curved-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .square-curved-block {
+            position: relative;
+            text-align: center;
+        }
+
+        .category-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and opacity as needed */
+            color: #fff; /* Text color */
+            padding: 5px; /* Adjust padding as needed */
+            margin: 0;
+        }
+
+        .square-curved-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: black;
+            color: white; /* Adjust text color as needed */
+            padding: 10px; /* Adjust padding as needed */
+            text-align: center;
+        }
+
+        /* Body Styles */
+        body {
+            background-color: #ACADA8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="tanu-header">
+        <span class="monospace-heading"><b>Accessories!</b></span>
+    </h2>
+
+    </header>
+
+    <section id="product-listings">
+        <a class="square-curved-block" href="belts.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/belts/b1.jpg') }}" alt="What's New">
+            <p class="category-name">Belts</p>
+        </a>
+        <a class="square-curved-block" href="bracelets.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/bracelets/b1.jpg') }}" alt="Kurta Sets">
+            <p class="category-name">Bracelets</p>
+        </a>
+        <a class="square-curved-block" href="chains.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/chains/b1.jpg') }}" alt="Dresses">
+            <p class="category-name">chains</p>
+        </a>
+        <a class="square-curved-block" href="footwear.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/footwear/b1.webp') }}" alt="Tops & Tees">
+            <p class="category-name">Foot wear</p>
+        </a>
+        <a class="square-curved-block" href="glasses.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/glasses/b1.jpg') }}" alt="Jeans">
+            <p class="category-name">Glasses</p>
+        </a>
+        <a class="square-curved-block" href="handbags.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/handbags/b1.jpg') }}" alt="Sarees">
+            <p class="category-name">Handbags</p>
+        </a>
+        <a class="square-curved-block" href="makeup.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/makeup/b2.jpg') }}" alt="Sports">
+            <p class="category-name">Make up</p>
+        </a>
+        <a class="square-curved-block" href="coord.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/accessories/watches/b1.jpg') }}" alt="coord">
+            <p class="category-name">Watches</p>
+        </a>
+    </section>
+</body>
+</html>

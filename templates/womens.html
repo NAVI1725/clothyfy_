@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- In the head section of your HTML -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom-styles.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourCustomFont">
+
+    <title>Women's Clothing - Clothing Recommendation System</title>
+    <style>
+        /* Add your CSS styles for the square curved blocks here */
+         .square-curved-block {
+            display: inline-block;
+            width: 230px;
+            height: 230px;
+            margin: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .square-curved-block:hover {
+            background-color: #730b84;
+        }
+        .square-curved-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .square-curved-block {
+            position: relative;
+            text-align: center;
+        }
+
+        .category-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and opacity as needed */
+            color: #fff; /* Text color */
+            padding: 5px; /* Adjust padding as needed */
+            margin: 0;
+        }
+
+        .square-curved-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: black;
+            color: white; /* Adjust text color as needed */
+            padding: 10px; /* Adjust padding as needed */
+            text-align: center;
+        }
+
+        /* Body Styles */
+        body {
+            background-color: #ACADA8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="tanu-header">
+        <span class="monospace-heading"><b>Women's Clothing!</b></span>
+    </h2>
+    </header>
+
+    <section id="product-listings">
+        <a class="square-curved-block" href="w_w_n.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/new.jpg') }}" alt="What's New">
+            <p class="category-name">What's New</p>
+        </a>
+        <a class="square-curved-block" href="kurta.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/kurta.jpg') }}" alt="Kurta Sets">
+            <p class="category-name">KURTA SETS</p>
+        </a>
+        <a class="square-curved-block" href="dresses.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/dresses.jpg') }}" alt="Dresses">
+            <p class="category-name">DRESSES</p>
+        </a>
+        <a class="square-curved-block" href="tops.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/tops.jpg') }}" alt="Tops & Tees">
+            <p class="category-name">TOPS</p>
+        </a>
+        <a class="square-curved-block" href="wjeans.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/jeans.jpg') }}" alt="Jeans">
+            <p class="category-name">JEANS</p>
+        </a>
+        <a class="square-curved-block" href="sarees.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/saree.jpg') }}" alt="Sarees">
+            <p class="category-name">SAREES</p>
+        </a>
+        <a class="square-curved-block" href="sports.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/sports.jpg') }}" alt="Sports">
+            <p class="category-name">SPORTS WEAR</p>
+        </a>
+        <a class="square-curved-block" href="coord.html">
+            <img class="square-curved-img" src="{{ url_for('static', filename='assets/images/women/category/coord.jpg') }}" alt="coord">
+            <p class="category-name">CO-ORD</p>
+        </a>
+    </section>
+</body>
+</html>

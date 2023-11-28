@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- You can link your CSS styles here if needed -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(15, 15, 15); /* Set the background color of the body to black */
+            color: rgb(16, 16, 16); /* Set the text color to white */
+        }
+
+        #feedback {
+            text-align: center;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ACADA8; /* Set the background color of the feedback box to #ACADA8 */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #feedback form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #feedback form label,
+        #feedback form input,
+        #feedback form textarea {
+            margin: 10px 0;
+        }
+
+        #feedback form .rating {
+            display: flex;
+            justify-content: center; /* Center the stars horizontally */
+            align-items: center; /* Center the stars vertically */
+        }
+
+        #feedback form .rating label {
+            cursor: pointer;
+            font-size: 25px;
+            margin: 0 5px; /* Add some spacing between stars */
+            color: rgb(193, 159, 36); /* Default color for unselected stars */
+        }
+
+        #feedback form .rating input {
+            display: none;
+        }
+
+        #feedback form .rating label:before {
+            content: '\2606';
+        }
+
+        #feedback form .rating input:checked ~ label:before {
+            content: '\2605';
+            color: gold; /* Color for selected stars */
+        }
+
+        #feedback form .submit-button {
+            background-color: #2F4550;
+            color: #0b0a0a;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Feedback Form</h1>
+  </header>
+
+  <section id="feedback">
+    <h2 style="color: rgb(12, 12, 12);">We'd Love to Hear Your Feedback!</h2>
+    <p>Have a comment, suggestion, or complaint? Let us know below:</p>
+
+<form action="/submit_feedback" method="post">
+
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="rating">Rate us out of 5:</label>
+  <div class="rating">
+    <input type="radio" id="star1" name="rating" value="5" required>
+    <label for="star1"></label>
+    <input type="radio" id="star2" name="rating" value="4" required>
+    <label for="star2"></label>
+    <input type="radio" id="star3" name="rating" value="3" required>
+    <label for="star3"></label>
+    <input type="radio" id="star4" name="rating" value="2" required>
+    <label for="star4"></label>
+    <input type="radio" id="star5" name="rating" value="1" required>
+    <label for="star5"></label>
+  </div>
+  <section style="color: white;">5___4___3___2___1</section>
+
+  <label for="feedback">Your Feedback:</label>
+  <textarea id="feedback" name="feedback" rows="4" required></textarea>
+   <a class="submit-button" href="thankyou.html">
+      <input type="submit" value="Submit Feedback" class="submit-button">
+</a>
+</form>
+
+  </section>
+</body>
+</html>

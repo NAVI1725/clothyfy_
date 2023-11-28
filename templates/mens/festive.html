@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- In the head section of your HTML -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom-styles.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourCustomFont">
+
+    <title>FESTIVE WEAR</title>
+    <style>
+        /* Add your CSS styles for the square curved blocks here */
+        .square-curved-block {
+            display: inline-block;
+            width: 230px;
+            height: 230px;
+            margin: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .square-curved-block:hover {
+            background-color: #730b84;
+        }
+        .square-curved-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .square-curved-block {
+            position: relative;
+            text-align: center;
+        }
+
+        .category-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and opacity as needed */
+            color: #fff; /* Text color */
+            padding: 5px; /* Adjust padding as needed */
+            margin: 0;
+        }
+
+        .square-curved-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: black;
+            color: white; /* Adjust text color as needed */
+            padding: 10px; /* Adjust padding as needed */
+            text-align: center;
+        }
+
+        /* Body Styles */
+        body {
+            background-color: #ACADA8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="tanu-header">
+            <span class="monospace-heading"><b>FESTIVE WEAR</b></span>
+        </h2>
+    </header>
+
+    <section id="product-listings">
+        <div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j1.jpeg', 'Blue royal Festive Wear')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j1.jpeg" class="square-curved-img" alt="a1">
+        <img src="assets/images/men/category/FESTIVE WEAR/j1.jpeg" alt="a1">
+    </a>
+    <p class="category-name">Blue royal Festive Wear</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j2.jpeg', 'Dhoti Kurta Red Velvet')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j2.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j2.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Dhoti Kurta Red Velvet</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j3.jpeg', 'Formal Embroided Ethnic')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j3.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j3.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Formal Embroided Ethnic</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j4.jpeg', 'Jodpuri Kurta Pyjama')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j4.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j4.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Jodpuri Kurta Pyjama</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j5.jpeg', 'Pink Embroided Sequin Ethnic')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j5.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j5.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Pink Embroided Sequin Ethnic</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j6.jpeg', 'Brown Sherwani')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j6.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j6.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Brown Sherwani</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j7.jpeg', 'Simple Red Kurta Set')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j7.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j7.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Green Floral Dress</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j8.jpeg', 'South Indian Festive Wear')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j8.jpeg" class="square-curved-img" alt="Red Full Dress">
+        <img src="assets/images/men/category/FESTIVE WEAR/j8.jpeg" alt="Red Full Dress">
+    </a>
+    <p class="category-name">South Indian Festive Wear</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j9.jpeg', 'Wedding Wear')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j9.jpeg" class="square-curved-img" alt="What's New">
+        <img src="assets/images/men/category/FESTIVE WEAR/j9.jpeg" alt="What's New">
+    </a>
+    <p class="category-name">Wedding Wear</p>
+</div>
+
+<div class="square-curved-block" onclick="openFullScreen('assets/images/men/category/FESTIVE WEAR/j10.jpeg', 'White Silk ethnic')">
+    <a href="assets/images/men/category/FESTIVE WEAR/j10.jpeg" class="square-curved-img" alt="Red A-line Dress">
+        <img src="assets/images/men/category/FESTIVE WEAR/j10.jpeg" alt="Red A-line Dress">
+    </a>
+    <p class="category-name">White Silk ethnic</p>
+</div>
+
+        <!-- Add similar blocks for other categories -->
+    </section>
+
+    <script>
+        function openFullScreen(imageSrc, categoryName) {
+            var modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '10%';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
+            modal.style.zIndex = '1';
+
+            var container = document.createElement('div');
+            container.style.display = 'flex';
+            container.style.flexDirection = 'column';
+            container.style.alignItems = 'center';
+            container.style.justifyContent = 'center';
+            container.style.height = '100%';
+            container.style.margin = '0px'; /* Adjust margin as needed */
+
+            var img = document.createElement('img');
+            img.src = imageSrc;
+            img.style.width = '34%'; /* Zoom to 120% */
+            img.style.height = 'auto';
+            img.style.borderRadius = '20px';
+
+            var categoryNameElement = document.createElement('p');
+            categoryNameElement.innerText = categoryName;
+            categoryNameElement.style.color = '#fff';
+            categoryNameElement.style.textAlign = 'center';
+
+            container.appendChild(img);
+            container.appendChild(categoryNameElement);
+            modal.appendChild(container);
+            document.body.appendChild(modal);
+
+            modal.onclick = function () {
+                modal.style.display = 'none';
+            };
+        }
+    </script>
+</body>
+</html>
